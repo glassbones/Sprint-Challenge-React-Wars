@@ -1,20 +1,24 @@
 import React from 'react';
-import CharacterList from "./components/CharacterList"
+import Navbar from './components/Navbar'
+import CharacterList from './components/CharacterList'
 import './App.css';
 
+/////////////////////////////////////////////////////////////////
+//                                                             //
+//  WARNING! As of now an API request is instantly sent every  //
+//  time the character search bar is changed (single keypress) //
+//                                                             //
+/////////////////////////////////////////////////////////////////
 
+const App = () => 
+(
+    <div>
 
-const App = () => {
-   
-    return (
+      <Navbar />
 
-        <div className="App">
+      <CharacterList />
+      
+    </div>
+)
 
-          <h1 className="Header">Rick and Morty!</h1>
-          <CharacterList />
-          
-        </div>
-    )
-}
-
-export default App
+export default App;
